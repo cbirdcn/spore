@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package api.bye.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "spore/api/bye/v1;bye";
+option java_multiple_files = true;
+option java_package = "api.bye.v1";
+
+//service Bye {
+//	rpc CreateBye (CreateByeRequest) returns (CreateByeReply);
+//	rpc UpdateBye (UpdateByeRequest) returns (UpdateByeReply);
+//	rpc DeleteBye (DeleteByeRequest) returns (DeleteByeReply);
+//	rpc GetBye (GetByeRequest) returns (GetByeReply);
+//	rpc ListBye (ListByeRequest) returns (ListByeReply);
+//	rpc SayBye (ByeRequest) returns (ByeReply)  {
+//		option (google.api.http) = {
+//			get: "/bye/{name}"
+//		};
+//	}
+//}
+
+//message CreateByeRequest {}
+//message CreateByeReply {}
+//
+//message UpdateByeRequest {}
+//message UpdateByeReply {}
+//
+//message DeleteByeRequest {}
+//message DeleteByeReply {}
+//
+//message GetByeRequest {}
+//message GetByeReply {}
+//
+//message ListByeRequest {}
+//message ListByeReply {}
+
+// The request message containing the user's name.
+message ByeRequest {
+	string name = 1;
+}
+
+// The response message containing the greetings
+message ByeReply {
+	string message = 1;
+}
